@@ -8,4 +8,6 @@ class FavoriteProject < ActiveRecord::Base
   validates_presence_of :project
   validates_uniqueness_of :project_id, :scope => [ :user_id ] 
   
+  attr_accessible :user
+  attr_accessible :project
 end
